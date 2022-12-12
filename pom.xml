@@ -28,7 +28,7 @@
     </parent>
     <groupId>com.github.javiermonton</groupId>
     <artifactId>kafka-config-provider-aws</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.8</version>
     <name>kafka-config-provider-aws</name>
     <description>A Kafka Connect ConfigProvider for AWS Secrets Manager</description>
     <url>https://github.com/JavierMonton/kafka-config-provider-aws</url>
@@ -74,7 +74,7 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub JavierMonton Apache Maven Packages</name>
+            <name>GitHub Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/JavierMonton/kafka-config-provider-aws</url>
         </repository>
     </distributionManagement>
@@ -92,27 +92,4 @@
             <artifactId>aws-java-sdk-sts</artifactId>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.4.2</version>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>assemble-all</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
